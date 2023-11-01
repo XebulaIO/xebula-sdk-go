@@ -1,8 +1,8 @@
 package network
 
 type Config struct {
-	base_url string
-	timeout  int
+	BaseURL string
+	Timeout int
 }
 
 func (c *Config) ValidateStatus(status int) bool {
