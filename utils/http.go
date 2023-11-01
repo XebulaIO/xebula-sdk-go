@@ -159,8 +159,6 @@ func (c *HttpClient) open(rawurl, method string, in, out interface{}, headers ..
 		req.SetBasicAuth(c.BasicAuth.Username, c.BasicAuth.Password)
 	}
 
-	// if we are posting or putting data, we need to
-	// write it to the body of the request.
 	if in != nil {
 		rc, ok := in.(io.ReadCloser)
 		if ok {

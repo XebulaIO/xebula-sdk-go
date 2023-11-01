@@ -7,9 +7,6 @@ type Network struct {
 	Wallet Wallet
 }
 
-type Wallet struct {
-}
-
 type INetwork interface {
 	genereatePrivateKey() []uint8
 }
