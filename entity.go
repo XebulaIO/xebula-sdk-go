@@ -27,8 +27,8 @@ func (e *Entity) BuildURL(endpoint string) (string, error) {
 	return fmt.Sprintf("%s/%s%s", e.Config.BaseURL, VERSION, endpoint), nil
 }
 
-func (e *Entity) ApiCall(endpoint string, method utils.HttpMethod, in, out interface{}, path string, headers ...utils.Header) error {
-	url, err := e.BuildURL(path)
+func (e *Entity) ApiCall(endpoint string, method utils.HttpMethod, in, out interface{}, headers ...utils.Header) error {
+	url, err := e.BuildURL(endpoint)
 	if err != nil {
 		return err
 	}
